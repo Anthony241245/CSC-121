@@ -5,7 +5,7 @@
 
 More_routes = 'y'
 route_num = 1
-fastest_time = 0
+fastest_time = []
 # While loop starts
 while More_routes  == 'y':
     route_distance = int(input(f"Enter route {route_num} distance (miles): "))
@@ -17,6 +17,9 @@ while More_routes  == 'y':
         
     route_num += 1    
     More_routes = input("More routes (y/n)?: ")
+
+    fastest_time.index = min()
+        
     # Display
 print(f"Route {fastest_route_number} is the fastest; {fastest_time:.0f} mintues")
 
