@@ -5,8 +5,9 @@
 
 More_routes = 'y'
 route_num = 1
-fastest_time = []
+fastest_time = 0
 fastest_route_number = 0
+first_route = True
 # While loop starts
 while More_routes  == 'y':
     route_distance = int(input(f"Enter route {route_num} distance (miles): "))
@@ -14,11 +15,15 @@ while More_routes  == 'y':
     # Calc
     time_hr = route_distance / route_speed
     time_minutes = time_hr * 60
-    fastest_route_number = route_num
-
-     if time_minutes < fastest_time:
+    if first_route:
         fastest_time = time_minutes
         fastest_route_number = route_num
+        first_route = False
+    elif time_minutes < fastest_time:
+        # Update fastest time and route
+        fastest_time = time_minutes
+        fastest_route_number = route_num
+     
         
     route_num += 1    
     More_routes = input("More routes (y/n)?: ")
