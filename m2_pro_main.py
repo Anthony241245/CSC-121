@@ -1,6 +1,6 @@
 
 import store_fun as fn
-
+# from store_fun import (functions)
 
 
 def main():
@@ -12,49 +12,49 @@ def main():
     print("Customer LESS than 10 items, recieves 0 discount")
     print("6.2% sales tax is applied")
 
-    choice = "1"
-    
+    # Initialize choice
+    choice = 1
 
-    while choice != "2":
+    
+    
+    
+    while choice != 2:
         
         # call menu function        
-        menu()
+        fn.menu()
+
         #enter choice
         choice = int(input("\nEnter Choice: "))
         
         #evaluate what user entered
         
-        if choice == "1":
+        if choice == 1:
 
-            # get input
+                # get input
             count = int(input("Enter number of items: "))
-            
-        # calculate cost, tax rate, and tax
-        cost = fn.calcCost(count)
-        tax_rate = .062
-        tax = cost * tax_rate
-            
-            # display results
-        print(f"Cost{cost}")
-        print(f"Tax {tax}")
-    
-    else:
-        choice < "1" or choice > "2"
-        input = choice("Invalid: ")
-        
+                
+            # calculate cost, tax rate, and tax
+            cost = fn.calcCost(count)
+            taxrate= .062
+            tax = cost * taxrate
 
-def menu():
-        """
-        function displays menu options
-    
-        Returns
-        -------
-        None.
-    
-        """
+
         
-        print("1) Calculate Cost")
-        print("2) Exit")
+            fn.display(cost,tax)
+    
+        elif choice == 2:
+
+            print("\nProgram Terminationg....")
+
+        else:
+
+            print("Invalid Entry")
+            
+            
+       
+    
+    
+        
 
 
 

@@ -13,18 +13,17 @@ def calcCost(count):
     cost : cost with or without discount
 
     """
-    cost = 1
-    discount_rate = 0.5
-    tax_rate = 0.62
+    
     if count >= 10:
-       discount = discount_rate * cost
-    tax = tax_rate * cost
+       discount = .05 * count
+    else:
+        discount = 0 
     cost = count - discount
-    return cost, tax
+    return cost
 
     # function to display lines with a consistent format
 def displayLine(label, amount):
-    print(f"{label:<15} {amount:.2f}")
+    print(f"{label:<10s}${amount:.2f}")
 
 # display results
 def display(cost, tax):
@@ -41,13 +40,24 @@ def display(cost, tax):
     """
     
     print("\nResults:")
-    displayLine("Net Cost:",cost)
+    displayLine("Net Cost:", cost)
     displayLine("Tax:", tax)
     displayLine("After tax:", cost+tax)
 
 
 
-
+def menu():
+        """
+        function displays menu options
+    
+        Returns
+        -------
+        None.
+    
+        """
+        
+        print("1) Calculate Cost")
+        print("2) Exit")
 
 
 
