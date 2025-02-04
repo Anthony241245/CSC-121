@@ -1,0 +1,11 @@
+Alice, 85
+Bob, 78
+Charlie, 92
+David, 74
+Emma, 88
+Frank, 95
+Grace, 81
+Henry, 90
+Isabel, 76
+Jack, 84
+The average grade for student is: 84.3 
