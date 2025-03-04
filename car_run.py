@@ -60,7 +60,7 @@ def main():
     muskCar.show_car_info()
     print()
     bezoCar.show_car_info()
-    while muskCar.miles_driven < 100 and bezoCar.miles_driven:
+    while muskCar.miles_driven < 100 and bezoCar.miles_driven < 100:
         # Drive both Cars one time
         muskCar.drive_car()
         bezoCar.drive_car()
